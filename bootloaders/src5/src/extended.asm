@@ -88,7 +88,7 @@ Start64:
     call print_anything
     ;jmp $
 
-    call _start
+    call _start ;this calls start theoretically
 
 
     jmp $

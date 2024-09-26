@@ -1,6 +1,18 @@
 [package]
-name = "x86-rust-bootloader"
+name = "rustcode"
 version = "0.1.0"
 edition = "2021"
+authors = ["me"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
 
 [dependencies]
+
+#bootimage = "0.10.3"
+#bootloader = "0.10.3"
+

@@ -1,8 +1,9 @@
 ENTRY(_start)
 INPUT
 (
-    build\extended.o
-    rustcode\target\target-spec\debug\deps\rustcode-90a1941c70347801.o
+    build\bootloader.bin
+    build\extended.bin
+    rustcode\target\target-spec\debug\rustcode
 )
 
 OUTPUT
