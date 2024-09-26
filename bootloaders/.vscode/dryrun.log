@@ -1,0 +1,8 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+File not found - *.asm
+
+make.exe: Entering directory 'c:/Users/Csabi/Desktop/primitiveOsByMe'
+truncate -s 1440k build/main_floppy.img
+ 
+make.exe: Leaving directory 'c:/Users/Csabi/Desktop/primitiveOsByMe'
+ 
