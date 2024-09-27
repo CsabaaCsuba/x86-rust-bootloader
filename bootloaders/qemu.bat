@@ -1,1 +1,0 @@
-qemu-system-x86_64 -fda build\bochs_tester2.img
