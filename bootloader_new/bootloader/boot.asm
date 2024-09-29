@@ -91,6 +91,7 @@ main:
 
     ; print hello world message
     mov si, msg_hello
+    
     call puts
 
     cli                         ; disable interrupts, this way CPU can't get out of "halt" state
