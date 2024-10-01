@@ -1,0 +1,13 @@
+What I did today to make this code work:
+
+0. used one of my assembly bootloader projects from 2 years ago, and cleaned it up
+1. copied the compile.bat to the run.sh file, so it is compatible with linux
+2. with bash variables, automated the finding of the rust compiler-generated .o file (by removing the previously generated one, in case it gets a new name)
+3. used a pretty basic linker script to allocate some memory for my files
+
+
+Notes:
+1. the bootloader has to be in .bin format, since the 16 bit code is not compatible with the .o elf 32 and 64 bit formats
+2. the ld has to produce a .tmp file first, because with a straight-up .bin, it would have errors
+3. because the bootloader tells the program to start at 0x7c00, the linker doesn't have to. Due of this, the bootloader is not included in the linker.
+4. only the rust object files can be linked, I found NO OTHER way to tell the compiler that the output should be an LSB relocatable
