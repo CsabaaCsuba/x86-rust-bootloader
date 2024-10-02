@@ -17,7 +17,7 @@ disk_read:
     ret
 
 BOOT_DRIVE:
-    db 0
+    db 0x00
 
 on_fail:
     mov bx, failstr
@@ -25,4 +25,4 @@ on_fail:
     jmp $
 
 failstr:
-    db 'read from string failed', 0
+    db 'read from disk failed', 0

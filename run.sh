@@ -1,3 +1,5 @@
+#!/bin/bash
+
 RUST_OBJ_FOLDER="rustcode/target/target-spec/release/deps"
 
 # Remove files that start with "rustcode" and end with ".o"

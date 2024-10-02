@@ -8,7 +8,7 @@ mov sp, bp
 
 
 
-mov bx, anyad
+mov bx, first_msg
 call print_string
 
 ;big screen for big dicks
@@ -22,10 +22,15 @@ call disk_read
 
 jmp PROGRAM_SPACE
 
+mov bx, error_str
+call print_string
+
 jmp $
 
-anyad:
+first_msg:
     db 'First stage boot loader', 0
+error_str:
+    db 'Jumping to continue failed', 0
 
 %include "src/print.asm"
 %include "src/diskreader.asm"
